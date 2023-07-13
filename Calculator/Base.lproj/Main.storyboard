@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeb-IE-E1z">
+                                <rect key="frame" x="16" y="188" width="361" height="148.66666666666663"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="99"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="900" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o6O-Kg-W7u">
+                                <rect key="frame" x="16" y="336.66666666666674" width="361" height="481.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w6w-GB-APV">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJk-0n-rBM" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="90"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="AC" cornerStyle="fixed">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLt-2v-LZJ" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="90"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="%" cornerStyle="fixed">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTm-ts-7r1" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="/" cornerStyle="fixed">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ORy-8Y-tdx">
+                                        <rect key="frame" x="0.0" y="98" width="361" height="89.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsL-VI-Dm8" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="89.666666666666671"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="7">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS1-ET-an1" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="89.666666666666671"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="8">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvm-T3-LIR" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="89.666666666666671"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="9">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zk8-oQ-c5d" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="89.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="*">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZcA-nl-4O7">
+                                        <rect key="frame" x="0.0" y="195.66666666666669" width="361" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJV-VX-dHJ" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="90"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="4">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-ed-DC8" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="5">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRt-rG-CIj" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="90"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="6">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf7-c7-1v0" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="-">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="93H-ub-Gsc">
+                                        <rect key="frame" x="0.0" y="293.66666666666669" width="361" height="89.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4Y-i9-PCt" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="89.666666666666671"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="1">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkN-bJ-nJR" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="89.666666666666671"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="2">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdl-hn-Kao" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="89.666666666666671"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="3">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZF-9e-tH2" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="89.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="+">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUM-2Z-Dkh">
+                                        <rect key="frame" x="0.0" y="391.33333333333331" width="361" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-0y-oYW" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="90"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="0">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-5h-oRS" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="90"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title=",">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yW-oD-hEN" customClass="CustomButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="=">
+                                                    <fontDescription key="titleFontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="26"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DJk-0n-rBM" firstAttribute="leading" secondItem="gsL-VI-Dm8" secondAttribute="leading" id="AfP-vx-GlJ"/>
+                                    <constraint firstItem="HTm-ts-7r1" firstAttribute="width" secondItem="Zk8-oQ-c5d" secondAttribute="width" id="P5j-DA-0ef"/>
+                                    <constraint firstItem="2yW-oD-hEN" firstAttribute="width" secondItem="LZF-9e-tH2" secondAttribute="width" id="PeI-HX-D70"/>
+                                    <constraint firstItem="WcN-0y-oYW" firstAttribute="width" secondItem="DJk-0n-rBM" secondAttribute="width" id="bse-j8-kv2"/>
+                                    <constraint firstItem="DJk-0n-rBM" firstAttribute="trailing" secondItem="TS1-ET-an1" secondAttribute="trailing" id="o9U-YL-x3X"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="o6O-Kg-W7u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5TE-Qj-nkb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jeb-IE-E1z" secondAttribute="trailing" constant="16" id="HcW-7I-xPh"/>
+                            <constraint firstItem="o6O-Kg-W7u" firstAttribute="top" secondItem="Jeb-IE-E1z" secondAttribute="bottom" id="JJ2-tb-ZXc"/>
+                            <constraint firstItem="o6O-Kg-W7u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="Yr0-f0-tMm"/>
+                            <constraint firstItem="Jeb-IE-E1z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a9q-IR-Twu"/>
+                            <constraint firstItem="Jeb-IE-E1z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="xgp-eC-iwq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o6O-Kg-W7u" secondAttribute="bottom" id="zqP-Rw-sX8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="Jeb-IE-E1z" id="z1D-K0-IAJ"/>
+                        <outletCollection property="digitsButtons" destination="WcN-0y-oYW" collectionClass="NSMutableArray" id="vn5-Ff-x8L"/>
+                        <outletCollection property="digitsButtons" destination="W4Y-i9-PCt" collectionClass="NSMutableArray" id="lLv-5E-sRM"/>
+                        <outletCollection property="digitsButtons" destination="MkN-bJ-nJR" collectionClass="NSMutableArray" id="KA8-1T-rGU"/>
+                        <outletCollection property="digitsButtons" destination="zdl-hn-Kao" collectionClass="NSMutableArray" id="seT-e9-M3f"/>
+                        <outletCollection property="digitsButtons" destination="RJV-VX-dHJ" collectionClass="NSMutableArray" id="nmW-0o-sb6"/>
+                        <outletCollection property="digitsButtons" destination="q3f-ed-DC8" collectionClass="NSMutableArray" id="z58-c5-fgM"/>
+                        <outletCollection property="digitsButtons" destination="PRt-rG-CIj" collectionClass="NSMutableArray" id="W4I-3g-gSZ"/>
+                        <outletCollection property="digitsButtons" destination="gsL-VI-Dm8" collectionClass="NSMutableArray" id="8af-f2-6VF"/>
+                        <outletCollection property="digitsButtons" destination="TS1-ET-an1" collectionClass="NSMutableArray" id="rGI-p0-pen"/>
+                        <outletCollection property="digitsButtons" destination="Uvm-T3-LIR" collectionClass="NSMutableArray" id="4EN-fG-5sc"/>
+                        <outletCollection property="functionalButtons" destination="DJk-0n-rBM" collectionClass="NSMutableArray" id="f7T-sq-vuV"/>
+                        <outletCollection property="functionalButtons" destination="xLt-2v-LZJ" collectionClass="NSMutableArray" id="1T5-Jm-00u"/>
+                        <outletCollection property="functionalButtons" destination="HTm-ts-7r1" collectionClass="NSMutableArray" id="AgG-fK-Ewd"/>
+                        <outletCollection property="functionalButtons" destination="Zk8-oQ-c5d" collectionClass="NSMutableArray" id="anD-s8-sFV"/>
+                        <outletCollection property="functionalButtons" destination="wf7-c7-1v0" collectionClass="NSMutableArray" id="YWF-q5-cZg"/>
+                        <outletCollection property="functionalButtons" destination="LZF-9e-tH2" collectionClass="NSMutableArray" id="1ME-dg-FlQ"/>
+                        <outletCollection property="functionalButtons" destination="2yW-oD-hEN" collectionClass="NSMutableArray" id="K0u-vh-s7f"/>
+                        <outletCollection property="functionalButtons" destination="0gQ-5h-oRS" collectionClass="NSMutableArray" id="Crc-IR-ZPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

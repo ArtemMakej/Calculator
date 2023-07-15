@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACB6C43B2A62AADD00BB19BD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ACB6C43A2A62AADD00BB19BD /* .gitignore */; };
 		ACE07F562A56EAC1008117C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE07F552A56EAC1008117C5 /* AppDelegate.swift */; };
 		ACE07F582A56EAC1008117C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE07F572A56EAC1008117C5 /* SceneDelegate.swift */; };
 		ACE07F5A2A56EAC1008117C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE07F592A56EAC1008117C5 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ACB6C43A2A62AADD00BB19BD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		ACE07F522A56EAC1008117C5 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE07F552A56EAC1008117C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE07F572A56EAC1008117C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		ACE07F492A56EAC1008117C5 = {
 			isa = PBXGroup;
 			children = (
+				ACB6C43A2A62AADD00BB19BD /* .gitignore */,
 				ACE07F542A56EAC1008117C5 /* Calculator */,
 				ACE07F6B2A56EAC4008117C5 /* CalculatorTests */,
 				ACE07F752A56EAC4008117C5 /* CalculatorUITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB6C43B2A62AADD00BB19BD /* .gitignore in Resources */,
 				ACE07F622A56EAC3008117C5 /* LaunchScreen.storyboard in Resources */,
 				ACE07F5F2A56EAC3008117C5 /* Assets.xcassets in Resources */,
 				ACE07F5D2A56EAC1008117C5 /* Main.storyboard in Resources */,

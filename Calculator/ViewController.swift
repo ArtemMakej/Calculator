@@ -161,7 +161,7 @@ class ViewController: UIViewController {
     }
     // создадим метод formatNumber(_:), который будет принимать число и форматировать  его с использованием numberFormatter, возвращая  стринг . Если форматирование не удалось, возвращается пустая строка.
     func formatNumber(_ number: Double) -> String {
-        print("Сау")
+        print("Shrek")
         return numberFormatter.string(from: NSNumber(value: number)) ?? ""
         
     }

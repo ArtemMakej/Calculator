@@ -139,7 +139,7 @@ class ViewController: UIViewController {
             if currentNumber == 0 {
                 result = 0
             let alert = UIAlertController(title: "На 0 делить нельзя!", message: "Будьте внимательны 🤓", preferredStyle: .alert)
-            let okActtion = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let okActtion = UIAlertAction(title: "ok", style: .default, handler: nil)
                 alert.addAction(okActtion)
                 present(alert, animated: true, completion: nil)
             } else {
@@ -161,7 +161,9 @@ class ViewController: UIViewController {
     }
     // создадим метод formatNumber(_:), который будет принимать число и форматировать  его с использованием numberFormatter, возвращая  стринг . Если форматирование не удалось, возвращается пустая строка.
     func formatNumber(_ number: Double) -> String {
+        print("Сау")
         return numberFormatter.string(from: NSNumber(value: number)) ?? ""
+        
     }
     // перечисление (основные математические операции и цифры)
     enum Operation {

@@ -7,25 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
     @IBOutlet var functionalButtons: [UIButton]!
     @IBOutlet var digitsButtons: [UIButton]!
     
-    var result: Double = 0 // результат вычислений
-    var currentDigit: String = "0" // используется в калькуляторе для отслеживания текущей цифры
-    var shouldClearCurrentDigit: Bool = false // читать (1)
-    var currentMathOperation: Operation? //используется для отслеживания текущей математической операции
-    private var feedbackGenerator: UIImpactFeedbackGenerator? // класс создает физическую обратную связь с пользователем через тактильные механизмы (вибрацию)
+    // MARK: - Properties
+    
+    private var result: Double = 0 // результат вычислений
+    private var currentDigit = "0" // используется в калькуляторе для отслеживания текущей цифры
+    private var shouldClearCurrentDigit = false // читать (1)
+    private var currentMathOperation: Operation? //используется для отслеживания текущей математической операции
+    
+    private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium) // создаем экземпляр класса UIImpactFeedbackGenerator - отвечает за тактильную обратную связь // класс создает физическую обратную связь с пользователем через тактильные механизмы (вибрацию)
     
     // добавлено новое свойство numberFormatter, которое отвечает за форматирования чисел
-    lazy var numberFormatter: NumberFormatter = {
+    private var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter() // инициализировали класс
         formatter.numberStyle = .decimal // свойство numberStyle в .decimal указывает, что число должно быть отформатировано в десятичном стиле.
         return formatter
-        
-    } () // скобки ()  позволяют вызвать клоуджер
+    }() // скобки ()  позволяют вызвать клоужер
+    
+    // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,16 +47,17 @@ class ViewController: UIViewController {
         }
         bindButtons(buttonsArray: allButtons) // вызов bindButtons
         resultsLabel.text = formatNumber(result) // result форматируется с использованием numberFormatter и отображается в resultsLabel с помощью метода formatNumber(_:)
-        feedbackGenerator = UIImpactFeedbackGenerator(style: .medium) // создаем экземпляр класса UIImpactFeedbackGenerator - отвечает за тактильную обратную связь
-        feedbackGenerator?.prepare() //Метод prepare() используется для подготовки вызова обратной связи тактильного отклика
+        feedbackGenerator.prepare() //Метод prepare() используется для подготовки вызова обратной связи тактильного отклика
     }
+    
     // функция округляет края кнопок
     func roundCorners(buttonsArray: [UIButton], cornerRadius: CGFloat) {
         for button in buttonsArray {
             button.layer.cornerRadius = cornerRadius
         }
     }
-    /// функция добавляет обработку нажатия кнопкам
+    
+    // функция добавляет обработку нажатия кнопкам
     func bindButtons(buttonsArray: [UIButton]) {
         for button in buttonsArray {
             button.addTarget(self,
@@ -63,7 +68,7 @@ class ViewController: UIViewController {
     
     //Функция buttonAction является обработчиком события нажатия на кнопку (@objc указывает, что вы взаимодействуете с фреймворками, написанными на Objective-C)
     @objc func buttonAction(sender: UIButton) { // Параметр sender представляет кнопку, на которую было произведено нажатие
-        feedbackGenerator?.impactOccurred() //Метод вызывает генерацию тактильной обратной связи, чтобы передать пользователю физическое ощущение, связанное с нажатием кнопки
+        feedbackGenerator.impactOccurred() //Метод вызывает генерацию тактильной обратной связи, чтобы передать пользователю физическое ощущение, связанное с нажатием кнопки
         let operationOptional = Operation(text: sender.titleLabel?.text ?? "") //создаем экземпляр enum Operation, используя значение текста кнопки, на которую было произведено нажатие
         
         guard let operation = operationOptional else { return }

@@ -75,6 +75,10 @@ final class ViewController: UIViewController {
             fatalError("Couldn't init operation from button title")
         }
         
+        switchOperation(operation)
+    }
+    
+    func switchOperation(_ operation: Operation) {
         switch operation {
             
             // обработка кнопки "АС"
@@ -135,6 +139,7 @@ final class ViewController: UIViewController {
             resultsLabel.text = formatNumber(Double(digitsText) ?? 0) // В этой строке, digitsText преобразуется в Double, а затем форматируется с помощью метода formatNumber (форматирует число, убрая числа после запятой). Если digitsText не преобразована в число типа Double, оператор ?? (nil-coalescing operator) возвращает 0.
         }
     }
+    
     //Функция calculatorResult() выполняет вычисление результата на основе текущей математической операции (currentMathOperation) и текущей цифры (currentDigit).
     
     func calculatorResult() {
@@ -145,7 +150,7 @@ final class ViewController: UIViewController {
         case .divide:
             if currentNumber == 0 {
                 result = 0
-            let alert = UIAlertController(title: "На 0 делить нельзя!", message: "Будьте внимательны 🤓", preferredStyle: .alert)
+                let alert = UIAlertController(title: String.zeroDivisionWarningTitle, message: "Будьте внимательны 🤓", preferredStyle: .alert)
             let okActtion = UIAlertAction(title: "ok", style: .default, handler: nil)
                 alert.addAction(okActtion)
                 present(alert, animated: true, completion: nil)
@@ -171,4 +176,9 @@ final class ViewController: UIViewController {
         return numberFormatter.string(from: NSNumber(value: number)) ?? ""
         
     }
+}
+
+private extension String {
+    
+    static let zeroDivisionWarningTitle = "На 0 делить нельзя!"
 }

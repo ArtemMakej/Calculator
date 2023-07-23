@@ -71,7 +71,9 @@ final class ViewController: UIViewController {
         feedbackGenerator.impactOccurred() //Метод вызывает генерацию тактильной обратной связи, чтобы передать пользователю физическое ощущение, связанное с нажатием кнопки
         let operationOptional = Operation(text: sender.titleLabel?.text ?? "") //создаем экземпляр enum Operation, используя значение текста кнопки, на которую было произведено нажатие
         
-        guard let operation = operationOptional else { return }
+        guard let operation = operationOptional else {
+            fatalError("Couldn't init operation from button title")
+        }
         
         switch operation {
             
@@ -166,70 +168,7 @@ final class ViewController: UIViewController {
     }
     // создадим метод formatNumber(_:), который будет принимать число и форматировать  его с использованием numberFormatter, возвращая  стринг . Если форматирование не удалось, возвращается пустая строка.
     func formatNumber(_ number: Double) -> String {
-        print("Shrek")
         return numberFormatter.string(from: NSNumber(value: number)) ?? ""
         
     }
-    // перечисление (основные математические операции и цифры)
-    enum Operation {
-        case clear
-        case percent
-        case divide
-        case multiply
-        case substract
-        case add
-        case equal
-        case comma
-        case digit(Double)
-        
-        // инициализация перечисления
-        init?(text: String) {
-            self = .digit(Double(text) ?? 0.0)
-            switch text {
-            case "AC":
-                self = .clear
-            case "%":
-                self = .percent
-            case "/":
-                self = .divide
-            case "*":
-                self = .multiply
-            case "-":
-                self = .substract
-            case "+":
-                self = .add
-            case "=":
-                self = .equal
-            case ",":
-                self = .comma
-            case text where Double(text) != nil:
-                self = .digit(Double(text)!)
-            default:
-                return nil
-            }
-        }
-    }
-    
 }
-
-class CustomButton: UIButton {
-    
-    var isDigitButton = false
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        guard isDigitButton else { return }
-        backgroundColor = .lightGray
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        guard isDigitButton else { return }
-        backgroundColor = nil
-    }
-}
-
-// (1) - Флаг shouldClearCurrentDigit позволяет управлять этим поведением. Если shouldClearCurrentDigit установлено в true, это означает, что текущая цифра должна быть очищена и заменена новой цифрой. Если shouldClearCurrentDigit установлено в false, текущая цифра будет сохранена без изменений, и новая цифра будет добавлена к ней.
-
-
-

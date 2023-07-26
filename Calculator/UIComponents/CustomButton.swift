@@ -16,7 +16,7 @@ final class CustomButton: UIButton {
         guard isDigitButton else { return }
         backgroundColor = .lightGray
     }
-
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         guard isDigitButton else { return }

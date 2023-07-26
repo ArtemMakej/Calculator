@@ -19,6 +19,7 @@ enum Operation {
     case comma
     case digit(Double)
     
+    
     // инициализация перечисления
     init?(text: String) {
         self = .digit(Double(text) ?? 0.0)

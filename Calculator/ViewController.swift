@@ -14,12 +14,11 @@ final class ViewController: UIViewController {
     @IBOutlet var digitsButtons: [UIButton]!
     
     // MARK: - Properties
-    
+    private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     private var result: Double = 0
     private var currentDigit = "0"
     private var shouldClearCurrentDigit = false
     private var currentMathOperation: Operation?
-    private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     private var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -30,6 +29,10 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareButtons()
+    }
+    
+    private func prepareButtons() {
         let allButtons = digitsButtons + functionalButtons
         for digitButton in digitsButtons {
             let customButton = digitButton as? CustomButton
@@ -43,13 +46,13 @@ final class ViewController: UIViewController {
         resultsLabel.text = formatNumber(result)
         feedbackGenerator.prepare()
     }
-    // функция округляет края кнопок
+    /// Округление краев кнопок
     func roundCorners(buttonsArray: [UIButton], cornerRadius: CGFloat) {
         for button in buttonsArray {
             button.layer.cornerRadius = cornerRadius
         }
     }
-    // функция добавляет обработку нажатия кнопкам
+    /// Добавляем обработку нажатия кнопкам
     func bindButtons(buttonsArray: [UIButton]) {
         for button in buttonsArray {
             button.addTarget(self,
@@ -59,9 +62,8 @@ final class ViewController: UIViewController {
     }
     @objc func buttonAction(sender: UIButton) {
         feedbackGenerator.impactOccurred()
-        let operationOptional = Operation(text: sender.titleLabel?.text ?? "")
-        
-        guard let operation = operationOptional else {
+        guard let operation = Operation(text: sender.titleLabel?.text ?? "")
+        else {
             fatalError("Couldn't init operation from button title")
         }
         switchOperation(operation)
@@ -107,8 +109,8 @@ final class ViewController: UIViewController {
         case .comma:
             if !currentDigit.contains(".") {
                 currentDigit += "."
-                resultsLabel.text = currentDigit
             }
+            resultsLabel.text = currentDigit
             
             //обработка цифр
         case let .digit(number):
@@ -134,8 +136,8 @@ final class ViewController: UIViewController {
         case .divide:
             if currentNumber == 0 {
                 result = 0
-                let alert = UIAlertController(title: String.zeroDivisionWarningTitle, message: "Будьте внимательны 🤓", preferredStyle: .alert)
-                let okActtion = UIAlertAction(title: "ok", style: .default, handler: nil)
+                let alert = UIAlertController(title: String.zeroDivisionWarningTitle, message: "", preferredStyle: .alert)
+                let okActtion = UIAlertAction(title: "ОК", style: .default, handler: nil)
                 alert.addAction(okActtion)
                 present(alert, animated: true, completion: nil)
             } else {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// перечисление (основные математические операции и цифры)
+/// Перечисление (основные математические операции и цифры)
 enum Operation {
     case clear
     case percent
@@ -19,10 +19,7 @@ enum Operation {
     case comma
     case digit(Double)
     
-    
-    // инициализация перечисления
     init?(text: String) {
-        self = .digit(Double(text) ?? 0.0)
         switch text {
         case "AC":
             self = .clear

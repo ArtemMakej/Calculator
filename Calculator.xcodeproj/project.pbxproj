@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6F83DA2A6D8B26008A876E /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F83D92A6D8B26008A876E /* Operation.swift */; };
+		AC6F83DD2A6D8C83008A876E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F83DC2A6D8C83008A876E /* CustomButton.swift */; };
 		ACB6C43B2A62AADD00BB19BD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ACB6C43A2A62AADD00BB19BD /* .gitignore */; };
 		ACE07F562A56EAC1008117C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE07F552A56EAC1008117C5 /* AppDelegate.swift */; };
 		ACE07F582A56EAC1008117C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE07F572A56EAC1008117C5 /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC6F83D92A6D8B26008A876E /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		AC6F83DC2A6D8C83008A876E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		ACB6C43A2A62AADD00BB19BD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		ACE07F522A56EAC1008117C5 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE07F552A56EAC1008117C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC6F83D82A6D8AE6008A876E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC6F83D92A6D8B26008A876E /* Operation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC6F83DB2A6D8C5E008A876E /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AC6F83DC2A6D8C83008A876E /* CustomButton.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		ACE07F492A56EAC1008117C5 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +122,8 @@
 		ACE07F542A56EAC1008117C5 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				AC6F83DB2A6D8C5E008A876E /* UIComponents */,
+				AC6F83D82A6D8AE6008A876E /* Models */,
 				ACE07F552A56EAC1008117C5 /* AppDelegate.swift */,
 				ACE07F572A56EAC1008117C5 /* SceneDelegate.swift */,
 				ACE07F592A56EAC1008117C5 /* ViewController.swift */,
@@ -265,6 +287,8 @@
 				ACE07F5A2A56EAC1008117C5 /* ViewController.swift in Sources */,
 				ACE07F562A56EAC1008117C5 /* AppDelegate.swift in Sources */,
 				ACE07F582A56EAC1008117C5 /* SceneDelegate.swift in Sources */,
+				AC6F83DA2A6D8B26008A876E /* Operation.swift in Sources */,
+				AC6F83DD2A6D8C83008A876E /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

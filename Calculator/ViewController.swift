@@ -136,8 +136,8 @@ final class ViewController: UIViewController {
         case .divide:
             if currentNumber == 0 {
                 result = 0
-                let alert = UIAlertController(title: String.zeroDivisionWarningTitle, message: "", preferredStyle: .alert)
-                let okActtion = UIAlertAction(title: "ОК", style: .default, handler: nil)
+                let alert = UIAlertController(title: String.zeroDivisionWarningTitle, message: .alert, preferredStyle: .alert)
+                let okActtion = UIAlertAction(title: .okActtion, style: .default, handler: nil)
                 alert.addAction(okActtion)
                 present(alert, animated: true, completion: nil)
             } else {
@@ -169,4 +169,6 @@ final class ViewController: UIViewController {
 private extension String {
     
     static let zeroDivisionWarningTitle = "На 0 делить нельзя!"
+    static let alert = ""
+    static let okActtion = "ОК"
 }
